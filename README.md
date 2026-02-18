@@ -6,6 +6,7 @@ This project aims to make and control a 4x4x4 LED cube using Arduino UNO. On com
 ## Table of Contents
   1. [Hardware Materials](#hardware)
   2. [Circuit Diagram](#circuit-diagram)
+  3. [Contributors](#contributors)
 
 
 ## [Hardware Materials](#hardware)
@@ -27,9 +28,9 @@ This project aims to make and control a 4x4x4 LED cube using Arduino UNO. On com
        <p><em>74HC595 Shift Register</em></p>
    </div>
 
-## Contributors :
-   - **[Dheeraj V R](https://github.com/DheerajVR)**
+## [Contributors](#contributors) :
    - **[Ayush Mishra](https://github.com/aayayayu)**
    - **Archana**
    - **Harshal Karanje**
+   - **[Dheeraj V R](https://github.com/DheerajVR)**
 

@@ -22,5 +22,8 @@ This project aims to make and control a 4x4x4 LED cube using Arduino UNO. On com
 
 ## [Circuit Diagram](#circuit-diagram)
    ### 74HC595 Shift Register Pinout
-       <img width="586" height="480" alt="image" src="https://github.com/user-attachments/assets/b65285ea-6ece-4eee-944e-27efe87b49a2" />
+   <div align = "center">
+       <img width="586" height="480" alt="image" src="https://github.com/user-attachments/assets/b65285ea-6ece-4eee-944e-27efe87b49a2">
+       <p><em>74HC595 Shift Register</em></p>
+   </div>
 

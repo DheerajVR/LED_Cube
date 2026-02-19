@@ -27,10 +27,10 @@ This project aims to make and control a 4x4x4 LED cube using Arduino UNO. On com
   
   The basic idea is that you write a 16 bit value (or two 8 bit value) to the shift registers, and these 16 bits corresponds to the state of each LED in a layer. Then you multiplex each layer fast enough so that the naked eye perceive it as a solid object.
   
-  Proper care is taken with the power to run the cube as 64 draw a huge amount of current. Resistors should be used to avoid over heating or damaging the components. Also transistors are used to connect each layer to ground as the Arduino board can't handle that much current.
+  Proper care is taken with the amount of power used to run the cube as 64 LEDs draw a huge amount of current. Resistors should be used to avoid over heating or damaging the components. Also transistors are used to connect each layer to ground as the Arduino board can't handle that much current.
 
   The Output Enable pin (OE) and Master Reset pin (MR) of both the shift registers should be connected to ground and Vcc respectively for normal operation.
-  The shift register should be powered using the Vcc and Ground pin (that is pin 16 and 8 respectively).
+  The shift register should be powered using the Vcc and Ground pin (that is pin 16 and 8 respectively) from an external power source of 5 volts.
 
 
 ## [Circuit Diagram](#circuit-diagram)

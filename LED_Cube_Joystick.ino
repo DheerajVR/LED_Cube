@@ -1,4 +1,15 @@
-#include "Button.h"
+//   Connect pin 2 of Arduino to pin 14 (data pin) of first shift register
+//   Connect pin 3 of Arduino to pin 11 (clock pin) of both shift register
+//   Connect pin 4 of Arduino to pin 12 (latch pin) of both shift register
+//   The base of the transistor of layer 0, 1, 2, 3 to pin 5, 6, 7, 8 respectively
+
+//   Connect VRx of joystick to A0
+//   Connect VRy of joystick to A1
+//   Connect one push button to pin 10 of Arduino, this is the Up button
+//   Connect one push button to pin 11 of Arduino, this is the Down button
+
+
+#include "Button.h"  // May have to download this library if not already downloaded
 
 int dataPin = 2;
 int clockPin = 3;
@@ -67,8 +78,6 @@ void setup() {
   Down.begin();
 
   Serial.begin(9600);
-
-  randomSeed(analogRead(A5));
 }
 
 unsigned long lastMoveTime_J = 0;

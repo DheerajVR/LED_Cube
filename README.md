@@ -1,6 +1,6 @@
 # LED Cube
 ## Description
-This project aims to make and control a 4x4x4 LED cube using Arduino UNO. On completion, the aim was further modified to using a joystick module to control the LEDs and using a sound sensor to make a sound visualizer.
+This project aims to make and control a 4x4x4 LED cube using Arduino UNO. On completion, the aim was further modified to using a joystick module to control the LEDs.
 
 
 ## Table of Contents
@@ -18,7 +18,6 @@ This project aims to make and control a 4x4x4 LED cube using Arduino UNO. On com
 - **Resistors** - For the LEDs
 - **HW-504 Joystick Module** - For controling the individual LEDs
 - **2 Push Buttons** - Aiding the joystick
-- **SY-M213 Sound Sensor** - For the sound visualizer
 - **Others** - Jumper wires, breadboard, perfboard, etc
 
 

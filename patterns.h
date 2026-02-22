@@ -1,4 +1,8 @@
 // { layer1, layer2, layer3, layer4, duration }
+// Here each layer takes a hexadecimal value corresponding to each LED in a layer. And duration refers to the time that single frame has to be shown.
+/*
+Ex : if you write 0xF000 (in HEX) -> 1111 0000 0000 0000 (in BIN) which corresponds to the first 4 LEDs
+*/
 
 #include <avr/pgmspace.h>
 
@@ -97,4 +101,5 @@ const uint16_t pattern4[][5] PROGMEM = {
   { 0x0, 0x9009, 0x9009, 0x9009, 100 },
   { 0x0, 0x0, 0x9009, 0x9009, 100 },
   { 0x0, 0x0, 0x0, 0x9009, 100 }
+
 };

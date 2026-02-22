@@ -1,3 +1,11 @@
+//   Make a file named "LED_Cube_Patterns" in the Arduino directory and put this file alongside the "pattern.h' file.
+//   The patterns that are to be played is stored in the "patterns.h" file
+
+//   Connect pin 2 of Arduino to pin 14 (data pin) of first shift register
+//   Connect pin 3 of Arduino to pin 11 (clock pin) of both shift register
+//   Connect pin 4 of Arduino to pin 12 (latch pin) of both shift register
+//   The base of the transistor of layer 0, 1, 2, 3 to pin 5, 6, 7, 8 respectively
+
 #include "patterns.h"
 
 int dataPin = 2;
@@ -50,7 +58,7 @@ void setup() {
 }
 
 void loop() {
-  playPattern(pattern1, 4);
+  playPattern(pattern1, 4); // pattern1 is played for 4 seconds
   playPattern(pattern2, 4);
   playPattern(pattern3, 4);
   playPattern(pattern4, 4);

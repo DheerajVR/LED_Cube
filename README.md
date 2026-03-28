@@ -1,13 +1,14 @@
 # LED Cube
 ## Description
-This project aims to make and control a 4x4x4 LED cube using Arduino UNO. On completion, the aim was further modified to using a joystick module to control the LEDs.
+This project aims to design and control a 4x4x4 LED cube using an Arduino UNO. The original goal was further modified to include a joystick module to control the LEDs.
 
 
 ## Table of Contents
   1. [Hardware Materials](#hardware)
   2. [Aim](#aim)
   3. [Circuit Diagram](#circuit-diagram)
-  4. [Contributors](#contributors)
+  4. [Gallery](#gallery)
+  5. [Contributors](#contributors)
 
 
 ## [Hardware Materials](#hardware)
@@ -16,20 +17,23 @@ This project aims to make and control a 4x4x4 LED cube using Arduino UNO. On com
 - **64 LEDs** - For the cube itself
 - **4 NPN Transistors (BC548)** - For handling the high current
 - **Resistors** - For the LEDs
-- **HW-504 Joystick Module** - For controling the individual LEDs
+- **HW-504 Joystick Module** - For controlling the individual LEDs
 - **2 Push Buttons** - Aiding the joystick
 - **Others** - Jumper wires, breadboard, perfboard, etc
 
 
 ## [Aim](#aim)
-  Here we have daisy-chained two shift registers, having a common latch pin and clock pin for both the registers, writing data into the data pin of the first shift register and connecting the pin 9 to the data pin of the second register. The LEDs are soldered in a way that for each horizontal layer, all the LEDs have a common ground and the anode of each vertical column of LEDs is connected to the 16 output pins (2 x 8 pins) of the shift registers.
-  
-  The basic idea is that you write a 16 bit value (or two 8 bit value) to the shift registers, and these 16 bits corresponds to the state of each LED in a layer. Then you multiplex each layer fast enough so that the naked eye perceive it as a solid object.
+  ### Circuitry and Logic
+  Here we have daisy-chained two shift registers, having a common latch pin and clock pin for both the registers, writing data into the data pin of the first shift register and connecting the pin 9 (Q7) to the data pin of the second register. The LEDs are soldered in a way that for each horizontal layer, all the LEDs have a common cathode (ground) and the anode of each vertical column of LEDs is connected to the 16 output pins (2 x 8 pins) of the shift registers.
 
-  The Output Enable pin (OE) and Master Reset pin (MR) of both the shift registers should be connected to ground and Vcc respectively for normal operation.
-  The shift register should be powered using the Vcc and Ground pin (that is pin 16 and 8 respectively) from an external power source of 5 volts.
+  ### Operation
+  The basic idea is that you write a 16 bit value (or two 8 bit value) to the shift registers, and these 16 bits corresponds to the state of each LED in a layer. Then you multiplex each layer fast enough so that the naked eye perceives it as a solid object.
 
-  Proper care is taken with the amount of power used to run the cube as 64 LEDs draw a huge amount of current. Resistors should be used to avoid over heating or damaging the components. Also transistors are used to connect each layer to ground as the Arduino board can't handle that much current. Emitter of the transistor is conneccted to the ground and collector iss connected to the cathode of a layer, then base is connected to Arduino (protect base with a resistor).
+  The Output Enable pin (OE) and Master Reset pin (MR) of both the shift registers should be connected to ground and VCC respectively for normal operation.
+  The shift register should be powered using the VCC and Ground pin (that is pin 16 and 8 respectively) from an external power source of 5 volts.
+
+  ### Power Management
+  Proper care is taken with the amount of power used to run the cube as 64 LEDs draw a huge amount of current. Resistors should be used to avoid over heating or damaging the components. Also transistors are used to connect each layer to ground as the Arduino board can't handle that much current. Emitter of the transistor is connected to the ground and collector is connected to the cathode of a layer (4 transistors for eacch layer), then base is connected to Arduino pins (protected by a resistor).
 
 
 ## [Circuit Diagram](#circuit-diagram)
@@ -44,6 +48,12 @@ This project aims to make and control a 4x4x4 LED cube using Arduino UNO. On com
        <img width="412" height="252" alt="image" src="https://github.com/user-attachments/assets/4b576fb9-4777-47fd-b5b9-641f91cb811d" />
        <p><em>Daisy-chained shift registers</em></p>
    </div>
+
+## [Gallery](#gallery)
+  <div align= "center">
+       <img width="400" height="392" alt="image" src="https://github.com/user-attachments/assets/79a40dce-cb40-4f5d-829d-87595507065b" />
+       <p><em>LED Cube</em></p>
+  </div>
 
 ## [Contributors](#contributors) :
    - **[Ayush R Mishra](https://github.com/aayayayu)**

@@ -1,4 +1,4 @@
-//   Make a file named "LED_Cube_Patterns" in the Arduino directory and put this file alongside the "pattern.h' file.
+//   Make a folder named "LED_Cube_Patterns" in the Arduino directory and put this file alongside the "pattern.h' file.
 //   The patterns that are to be played is stored in the "patterns.h" file
 
 //   Connect pin 2 of Arduino to pin 14 (data pin) of first shift register
